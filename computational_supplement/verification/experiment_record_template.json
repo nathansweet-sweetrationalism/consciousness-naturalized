@@ -1,0 +1,23 @@
+{
+  "template_only_no_observations": true,
+  "claim_id": "CN-CLAIM-TO-BE-DEFINED",
+  "claim_type": "hypothesis",
+  "subject_boundary": null,
+  "timescale_seconds": null,
+  "measurement_grain": null,
+  "target_construct": "phenomenality, consciousness-related clinical marker, or control capacity: distinguish explicitly",
+  "calibration_and_error": null,
+  "focal_model": null,
+  "rival_models": [],
+  "reported_or_behavioral_observation": null,
+  "mechanistic_prediction": null,
+  "independent_evidence": null,
+  "interventions": [],
+  "negative_controls": [],
+  "statistical_model_and_ensemble": null,
+  "preregistered_loss_condition": null,
+  "provenance": [],
+  "model_dependencies": [],
+  "update_rule": null,
+  "ethical_risk_and_consent": null
+}

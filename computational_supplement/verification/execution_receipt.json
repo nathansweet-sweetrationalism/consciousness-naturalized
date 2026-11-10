@@ -1,0 +1,678 @@
+{
+  "run_at_utc": "2026-11-10T17:13:09.393638+00:00",
+  "python": "3.12.14",
+  "claim_scope": "Exact arithmetic, unit checks, stipulated finite models and propositional encodings only. No empirical or phenomenal identity theorem.",
+  "results": [
+    {
+      "file": "foundational_formal_checks.py",
+      "source_sha256": "b6415c2e843c50d7d65fbec9473c45479a3c1c5f22f83ddba6b202869bf673b9",
+      "returned_json": {
+        "status": "passed",
+        "checks": [
+          {
+            "name": "illustrative_isothermal_one_bit_reset_bound",
+            "temperature_K": "300",
+            "k_B_J_per_K": "1.380649E-23",
+            "Q_min_J": "2.87097888507872379450477633377733006161061E-21",
+            "units": "(J/K)*K = J",
+            "scope": "Average reservoir heat for a symmetric, initially unknown bit reset in the ideal isothermal setting; neither a universal cost of maintaining distinctions nor a measured heat.",
+            "result": "pass"
+          },
+          {
+            "name": "bijective_memory_persistence_versus_logically_irreversible_reset",
+            "identity_bijective": true,
+            "reset_bijective": false,
+            "scope": "Logical state-map check only. It rejects automatic application of the one-bit erasure bound to an identity operation. It does not assert cost-free indefinite physical retention.",
+            "result": "pass"
+          },
+          {
+            "name": "finite_horizon_viability_depends_on_admissible_controls",
+            "dynamics": "x[t+1] = x[t] + 1 + u[t]",
+            "K": [
+              0,
+              1
+            ],
+            "horizon_steps": 2,
+            "control_set": [
+              -1,
+              0
+            ],
+            "viability_with_control": [
+              0,
+              1
+            ],
+            "viability_without_control": [],
+            "scope": "Exact finite countermodel to suppressing the control quantifier. Does not validate the continuous physical system or equate viability with conscious experience.",
+            "result": "pass"
+          },
+          {
+            "name": "graph_cycle_does_not_entail_real_constraint_maintenance",
+            "arcs": [
+              [
+                0,
+                1
+              ],
+              [
+                1,
+                0
+              ]
+            ],
+            "has_cycle": true,
+            "external_energy_available": false,
+            "maintained_in_toy_model": false,
+            "scope": "Logical independence test. Real Montévil–Mossio closure requires identifying maintained physical constraints, processes, environmental support, and appropriate timescales.",
+            "result": "pass"
+          },
+          {
+            "name": "bounded_success_does_not_logically_entail_universal_physicalism",
+            "tested_target_successes": 2,
+            "additional_unsettled_target": 1,
+            "countermodel_satisfiable": "sat",
+            "scope": "Formal quantifier point only; existence of an actual nonphysical entity is not asserted or supported by this model.",
+            "result": "pass"
+          },
+          {
+            "name": "second_law_balance_dimensional_contract",
+            "entropy_units": "J/K",
+            "heat_units": "J",
+            "temperature_units": "K",
+            "Q_over_T_units": "J/K",
+            "symbolic_SI_entropy_dimension": "energy/temperature",
+            "symbolic_SI_heat_over_T_dimension": "energy/temperature",
+            "scope": "Unit ledger and symbolic expression shape only. A thermodynamic entropy balance requires the physical assumptions and proper sign convention stated in the prose.",
+            "result": "pass"
+          }
+        ]
+      },
+      "stderr": "",
+      "exit_code": 0
+    },
+    {
+      "file": "section_xii_formal_checks.py",
+      "source_sha256": "1294c4ea73eb4ceb315c35f3cd46d9cd48f4de4a31ba1ff8f3c98ac1ad0736ab",
+      "returned_json": {
+        "source": "Nathan Sweet, Consciousness Naturalized, WordPress #2115; original §12 formal assertions",
+        "scope": "Reproducible local checks, not peer-reviewed proof or demonstration of consciousness",
+        "python": "3.12.14",
+        "sympy": "1.14.0",
+        "z3": "5.4.0",
+        "checks": [
+          {
+            "claim": "§12.3.1 formula uses entropy-production rate on LHS and energy/time on RHS",
+            "test": "SymPy SI dimensional-expression comparison",
+            "lhs": "energy/(temperature*time)",
+            "rhs": "energy/time",
+            "same_dimension": false,
+            "entropy_rate_candidate": "energy/(temperature*time)",
+            "scope": "Units only. Replacing k_B*T by k_B corrects dimensions but does not prove report encoding requires erasure.",
+            "result": "dimensional mismatch confirmed"
+          },
+          {
+            "claim": "§12.3.1(A): encoding a distinguishable report logically requires erasure of the encoded bit count",
+            "test": "Exact 2-bit reversible CNOT truth-table enumeration",
+            "mapping": {
+              "(0, 0)": [
+                0,
+                0
+              ],
+              "(0, 1)": [
+                0,
+                1
+              ],
+              "(1, 0)": [
+                1,
+                1
+              ],
+              "(1, 1)": [
+                1,
+                0
+              ]
+            },
+            "bijective": true,
+            "copies_source_when_target_zero": true,
+            "result": "counterexample to logical necessity of erasure in the copying operation",
+            "scope": "Does not claim a cost-free reusable physical recorder. Initialization, reset, noise and control need separate physical accounting."
+          },
+          {
+            "claim": "§12.3.3 TC.1: S_r ∩ S_theta ∩ S_c is strictly smaller than S_r automatically",
+            "test": "Explicit finite sets, independently encoded SMT satisfiability",
+            "S_r": [
+              "a",
+              "b"
+            ],
+            "S_theta": [
+              "a",
+              "b"
+            ],
+            "S_c": [
+              "a",
+              "b"
+            ],
+            "intersection": [
+              "a",
+              "b"
+            ],
+            "strict_subset": false,
+            "smt_result_for_non_strict_case": "sat",
+            "result": "counterexample to universal strict inclusion",
+            "scope": "Does not refute strictness after an additional, empirically defended exclusion premise; that premise is the missing obligation."
+          },
+          {
+            "claim": "§12.3.3: exactly three measurement channels escape the general prediction/inference split",
+            "test": "Exhaustive finite product bijection (theta, closure, report) ↔ ((theta, closure), report)",
+            "triple_domain_size": 8,
+            "paired_domain_size": 8,
+            "bijection": true,
+            "result": "three channels alone do not escape a two-part partition with unrestricted internal prediction data",
+            "scope": "Additional instruments can improve empirical discrimination; this only tests the claimed representational escape."
+          },
+          {
+            "claim": "A middle logical regime can exist between Cartesian independence and strict report→internal determination",
+            "test": "Exhaustive finite relation over two internal and two report values",
+            "feasible_pairs": [
+              [
+                0,
+                0
+              ],
+              [
+                1,
+                0
+              ],
+              [
+                1,
+                1
+              ]
+            ],
+            "full_cartesian_product": false,
+            "internal_function_of_report": false,
+            "result": "constructive bounded example of non-full, non-functional pairing",
+            "scope": "Only a toy data relation. Does not establish K&H's full variation conditions, physical realizability, an organizational closure mechanism or a phenomenal identity."
+          },
+          {
+            "claim": "§12.6.3 CF.1: closure-preserving maps necessarily induce refinement of threat/support partitions",
+            "test": "Two explicit partitions plus SMT missing-bridge countermodel",
+            "old_partition": [
+              [
+                1,
+                2
+              ],
+              [
+                3
+              ]
+            ],
+            "new_partition": [
+              [
+                1,
+                3
+              ],
+              [
+                2
+              ]
+            ],
+            "new_refines_old": false,
+            "source_arrow_without_target_refinement": "sat",
+            "result": "the alleged implication needs a distinct monotonicity/compatibility axiom",
+            "scope": "Illustrative formalization, not a physical counterexample to all possible closure morphisms. A stronger definition may restore a functor but must be justified and tested."
+          },
+          {
+            "claim": "§12.5.2 TD.1: different closures have identical thermodynamic profiles only on a measure-zero set",
+            "test": "Exact discrete ensemble with two distinct structures and identical profiles",
+            "distinct_pairs": [
+              [
+                "A",
+                "B"
+              ],
+              [
+                "B",
+                "A"
+              ]
+            ],
+            "profile": [
+              1,
+              2
+            ],
+            "collision_fraction": "1",
+            "result": "measure-zero assertion is not universal without an ensemble/measure and a proof of genericity",
+            "scope": "Countermodel to unrestricted measure claim, not evidence that physical closure networks usually share profiles under a specified continuous distribution."
+          }
+        ]
+      },
+      "stderr": "",
+      "exit_code": 0
+    },
+    {
+      "file": "kh_dependency_finite_model.py",
+      "source_sha256": "b20d41a71d9ddb0d279bf550bee8e617433d31857e96312e4cd7bf1a56749e88",
+      "returned_json": {
+        "reference": "Kleiner & Hoel (2021), Definitions 3.8, A.2, 4.2; Proposition 3.9",
+        "results": [
+          {
+            "model": "full_product_independence_control",
+            "P_observable_pairs": [
+              [
+                0,
+                0
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                1,
+                0
+              ],
+              [
+                1,
+                1
+              ]
+            ],
+            "conceivable_O_bar_pairs": [
+              [
+                0,
+                0
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                1,
+                0
+              ],
+              [
+                1,
+                1
+              ]
+            ],
+            "missing_physically_feasible_pair_candidates": [],
+            "strong_independence_Def3_8": true,
+            "weak_independence_DefA_2_binary_specialization": true,
+            "strict_dependency_Def4_2_on_O_bar": false,
+            "report_fibers": {
+              "0": [
+                0,
+                1
+              ],
+              "1": [
+                0,
+                1
+              ]
+            },
+            "conceivable_report_fibers": {
+              "0": [
+                0,
+                1
+              ],
+              "1": [
+                0,
+                1
+              ]
+            },
+            "local_substitutions_by_report": {
+              "0": true,
+              "1": true
+            },
+            "universal_substitution_in_model": true,
+            "notes": "No empirical or phenomenal inference; finite deterministic obs, binary predictions, feasible systems stipulated for countermodel only."
+          },
+          {
+            "model": "strict_dependency_control",
+            "P_observable_pairs": [
+              [
+                0,
+                0
+              ],
+              [
+                1,
+                1
+              ]
+            ],
+            "conceivable_O_bar_pairs": [
+              [
+                0,
+                0
+              ],
+              [
+                1,
+                1
+              ]
+            ],
+            "missing_physically_feasible_pair_candidates": [
+              [
+                0,
+                1
+              ],
+              [
+                1,
+                0
+              ]
+            ],
+            "strong_independence_Def3_8": false,
+            "weak_independence_DefA_2_binary_specialization": false,
+            "strict_dependency_Def4_2_on_O_bar": true,
+            "report_fibers": {
+              "0": [
+                0
+              ],
+              "1": [
+                1
+              ]
+            },
+            "conceivable_report_fibers": {
+              "0": [
+                0
+              ],
+              "1": [
+                1
+              ]
+            },
+            "local_substitutions_by_report": {
+              "0": false,
+              "1": false
+            },
+            "universal_substitution_in_model": false,
+            "notes": "No empirical or phenomenal inference; finite deterministic obs, binary predictions, feasible systems stipulated for countermodel only."
+          },
+          {
+            "model": "middle_dependency_candidate",
+            "P_observable_pairs": [
+              [
+                0,
+                0
+              ],
+              [
+                1,
+                0
+              ],
+              [
+                1,
+                1
+              ]
+            ],
+            "conceivable_O_bar_pairs": [
+              [
+                0,
+                0
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                1,
+                0
+              ],
+              [
+                1,
+                1
+              ]
+            ],
+            "missing_physically_feasible_pair_candidates": [
+              [
+                0,
+                1
+              ]
+            ],
+            "strong_independence_Def3_8": false,
+            "weak_independence_DefA_2_binary_specialization": false,
+            "strict_dependency_Def4_2_on_O_bar": false,
+            "report_fibers": {
+              "0": [
+                0,
+                1
+              ],
+              "1": [
+                1
+              ]
+            },
+            "conceivable_report_fibers": {
+              "0": [
+                0,
+                1
+              ],
+              "1": [
+                0,
+                1
+              ]
+            },
+            "local_substitutions_by_report": {
+              "0": true,
+              "1": false
+            },
+            "universal_substitution_in_model": false,
+            "notes": "No empirical or phenomenal inference; finite deterministic obs, binary predictions, feasible systems stipulated for countermodel only."
+          }
+        ]
+      },
+      "stderr": "",
+      "exit_code": 0
+    },
+    {
+      "file": "plasticity_supplement_adversarial_checks.py",
+      "source_sha256": "2f4603ba29f8da9082cac6882100286fa3cfb5a40adaab6a00cc60e0b35d3ec7",
+      "returned_json": {
+        "source": "O'Reilly-Shah, Selvitella & Schurger (2026), S1 pp. 8–9, 22–23",
+        "cases": [
+          {
+            "claim_under_test": "S1 Remark 7.4: any finite or countable union of static FNNs has bounded approximation capacity",
+            "construction": "Countable family of finite static rational-weight ReLU nets f_n(x)=x/n+(2/n)Σ_k ReLU(x-k/n), n positive integer",
+            "target": "g(x)=x^2 on [0,1]",
+            "proof": "Each f_n is exact piecewise-linear interpolant; f_n(x)-x²=(x-a)(b-x) on [a,b], length=1/n, hence sup error=1/(4n²)→0.",
+            "checks": [
+              {
+                "n_segments": 1,
+                "max_error_exact": "1/4",
+                "max_error_float": 0.25,
+                "formula_sup_exact": "1/4"
+              },
+              {
+                "n_segments": 2,
+                "max_error_exact": "1/16",
+                "max_error_float": 0.0625,
+                "formula_sup_exact": "1/16"
+              },
+              {
+                "n_segments": 4,
+                "max_error_exact": "1/64",
+                "max_error_float": 0.015625,
+                "formula_sup_exact": "1/64"
+              },
+              {
+                "n_segments": 8,
+                "max_error_exact": "1/256",
+                "max_error_float": 0.00390625,
+                "formula_sup_exact": "1/256"
+              },
+              {
+                "n_segments": 16,
+                "max_error_exact": "1/1024",
+                "max_error_float": 0.0009765625,
+                "formula_sup_exact": "1/1024"
+              },
+              {
+                "n_segments": 32,
+                "max_error_exact": "1/4096",
+                "max_error_float": 0.000244140625,
+                "formula_sup_exact": "1/4096"
+              }
+            ],
+            "result": "A countable family of individually fixed FNNs approximates a target g not equal to any family member arbitrarily closely; refutes blanket countable-family inference, not Theorem 7.2's fixed-f positive distance.",
+            "scope": "One explicit target suffices against an unqualified no-arbitrary-approximation claim. Full C([0,1]) density also follows via standard piecewise-linear interpolation but is not machine-proved here."
+          },
+          {
+            "claim_under_test": "S1 Theorem 3.2 labels growing input-history domains a plasticity condition",
+            "fixed_weight_model": "h_t = h_(t-1) + x_t, y_t = h_t, h_0=0, x_t∈{0,1}; parameters never update",
+            "history_domains": [
+              {
+                "history_length": 1,
+                "history_domain_cardinality": 2
+              },
+              {
+                "history_length": 2,
+                "history_domain_cardinality": 4
+              },
+              {
+                "history_length": 3,
+                "history_domain_cardinality": 8
+              },
+              {
+                "history_length": 4,
+                "history_domain_cardinality": 16
+              },
+              {
+                "history_length": 5,
+                "history_domain_cardinality": 32
+              },
+              {
+                "history_length": 6,
+                "history_domain_cardinality": 64
+              },
+              {
+                "history_length": 7,
+                "history_domain_cardinality": 128
+              }
+            ],
+            "result": "The theorem's growing-history-domain premise holds for a fixed-weight recurrent model; its non-equivalence under strict domain matching is not specific to plasticity.",
+            "scope": "A counterexample to the characterization of the premise as plasticity, not a counterexample to Theorem 3.2 under its stated domain-equality definition."
+          }
+        ]
+      },
+      "stderr": "",
+      "exit_code": 0
+    },
+    {
+      "file": "reser_exact_statistical_audit.py",
+      "source_sha256": "59ae9a416eb150e3bcada547589c04b6d759edcff590402f9075bf983137f061",
+      "returned_json": {
+        "source": "Reser et al. 2021, doi:10.1371/journal.pone.0251710; Results/Fig.3",
+        "source_counts": {
+          "Aboriginal_perfect_after_below_perfect_baseline": "12/19",
+          "memory_palace": "10/22",
+          "overall_perfect_at_baseline": "17/76"
+        },
+        "authors_label": "OR=2.82, 95% CI 1.15-6.09 for Aboriginal method",
+        "reproduces_2_82_as_ratio_of_proportions": "48/17",
+        "reproduces_2_82_as_ratio_of_proportions_float": 2.823529411764706,
+        "conventional_odds_ratio_against_population_baseline": 5.949579831932773,
+        "direct_aboriginal_vs_memory_palace_odds_ratio": 2.057142857142857,
+        "fisher_exact_2sided_enumerated": 0.3501072711990699,
+        "fisher_exact_2sided_scipy": null,
+        "scope": "Exploratory, unadjusted direct 2-by-2 comparison among participants below perfect recall at baseline; independence/selection and multiple outcomes not validated; no claim of randomized treatment effect or source-author statistical intent",
+        "interpretation": "The published 2.82 numerically matches a ratio of post-training perfect-recall proportions to the overall baseline fraction, rather than a conventional odds ratio. The selected 12/19 vs 10/22 comparison is not decisive under Fisher's two-sided test; it does not establish direct superiority on the perfect-recall measure."
+      },
+      "stderr": "",
+      "exit_code": 0
+    },
+    {
+      "file": "logic_audit.py",
+      "returned_json": {
+        "scope": "Exhaustive classical propositional semantics, not empirical truth",
+        "results": [
+          {
+            "id": "local_success_does_not_entail_exhaustive_physicalism",
+            "status": "invalid_countermodel",
+            "atoms": [
+              "ExhaustivePhysicalism",
+              "LocalPhysicalSuccess"
+            ],
+            "worlds_checked": 4,
+            "premise_satisfying_worlds": 2,
+            "countermodel": {
+              "ExhaustivePhysicalism": false,
+              "LocalPhysicalSuccess": true
+            },
+            "premise_witness": {
+              "ExhaustivePhysicalism": false,
+              "LocalPhysicalSuccess": true
+            },
+            "source_claim": null,
+            "translation_notes": "Tests only the invalid unbridged proposition; a separate ontological argument could supply additional premises. Countermodel is not evidence of an actual nonphysical entity.",
+            "warning": "This checks the supplied encoding only, not premises or translation fidelity."
+          },
+          {
+            "id": "rival_failure_does_not_confirm_closure",
+            "status": "invalid_countermodel",
+            "atoms": [
+              "ClosureConfirmed",
+              "RivalConfirmed"
+            ],
+            "worlds_checked": 4,
+            "premise_satisfying_worlds": 2,
+            "countermodel": {
+              "ClosureConfirmed": false,
+              "RivalConfirmed": false
+            },
+            "premise_witness": {
+              "ClosureConfirmed": false,
+              "RivalConfirmed": false
+            },
+            "source_claim": null,
+            "translation_notes": "Alternatives have not been stipulated exhaustive. Distinguishes criticism from support transfer.",
+            "warning": "This checks the supplied encoding only, not premises or translation fidelity."
+          },
+          {
+            "id": "organization_does_not_entail_phenomenality_without_bridge",
+            "status": "invalid_countermodel",
+            "atoms": [
+              "OrganizationMeasured",
+              "PhenomenalConstitution",
+              "PredictiveSuccess"
+            ],
+            "worlds_checked": 8,
+            "premise_satisfying_worlds": 2,
+            "countermodel": {
+              "OrganizationMeasured": true,
+              "PhenomenalConstitution": false,
+              "PredictiveSuccess": true
+            },
+            "premise_witness": {
+              "OrganizationMeasured": true,
+              "PhenomenalConstitution": false,
+              "PredictiveSuccess": true
+            },
+            "source_claim": null,
+            "translation_notes": "No bridge premise has been provided; this does not prove the organization is not conscious.",
+            "warning": "This checks the supplied encoding only, not premises or translation fidelity."
+          },
+          {
+            "id": "necessary_marker_dissociation_valid_if_calibrated",
+            "status": "valid_classical_propositional",
+            "atoms": [
+              "ClosureNecessary",
+              "PhenomenalPresence"
+            ],
+            "worlds_checked": 4,
+            "premise_satisfying_worlds": 1,
+            "countermodel": null,
+            "premise_witness": {
+              "ClosureNecessary": false,
+              "PhenomenalPresence": false
+            },
+            "source_claim": null,
+            "translation_notes": "Valid modus tollens on translated propositions; whether 'ClosureNecessary' is a faithful measurable marker and whether phenomenal evidence is calibrated are separate empirical duties.",
+            "warning": "This checks the supplied encoding only, not premises or translation fidelity."
+          },
+          {
+            "id": "rival_exhaustivity_would_supply_inference",
+            "status": "valid_classical_propositional",
+            "atoms": [
+              "ClosureConfirmed",
+              "RivalConfirmed"
+            ],
+            "worlds_checked": 4,
+            "premise_satisfying_worlds": 1,
+            "countermodel": null,
+            "premise_witness": {
+              "ClosureConfirmed": true,
+              "RivalConfirmed": false
+            },
+            "source_claim": null,
+            "translation_notes": "Valid disjunctive syllogism if and only if the disjunction is a justified exhaustive premise.",
+            "warning": "This checks the supplied encoding only, not premises or translation fidelity."
+          }
+        ]
+      },
+      "exit_code": 0
+    }
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "claims": [
+    {
+      "id": "local_success_does_not_entail_exhaustive_physicalism",
+      "premises": ["LocalPhysicalSuccess"],
+      "conclusion": "ExhaustivePhysicalism",
+      "translation_notes": "Tests only the invalid unbridged proposition; a separate ontological argument could supply additional premises. Countermodel is not evidence of an actual nonphysical entity."
+    },
+    {
+      "id": "rival_failure_does_not_confirm_closure",
+      "premises": ["not RivalConfirmed"],
+      "conclusion": "ClosureConfirmed",
+      "translation_notes": "Alternatives have not been stipulated exhaustive. Distinguishes criticism from support transfer."
+    },
+    {
+      "id": "organization_does_not_entail_phenomenality_without_bridge",
+      "premises": ["OrganizationMeasured", "PredictiveSuccess"],
+      "conclusion": "PhenomenalConstitution",
+      "translation_notes": "No bridge premise has been provided; this does not prove the organization is not conscious."
+    },
+    {
+      "id": "necessary_marker_dissociation_valid_if_calibrated",
+      "premises": ["implies(PhenomenalPresence,ClosureNecessary)", "not ClosureNecessary"],
+      "conclusion": "not PhenomenalPresence",
+      "translation_notes": "Valid modus tollens on translated propositions; whether 'ClosureNecessary' is a faithful measurable marker and whether phenomenal evidence is calibrated are separate empirical duties."
+    },
+    {
+      "id": "rival_exhaustivity_would_supply_inference",
+      "premises": ["ClosureConfirmed or RivalConfirmed", "not RivalConfirmed"],
+      "conclusion": "ClosureConfirmed",
+      "translation_notes": "Valid disjunctive syllogism if and only if the disjunction is a justified exhaustive premise."
+    }
+  ]
+}

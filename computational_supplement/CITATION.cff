@@ -1,0 +1,10 @@
+cff-version: 1.2.0
+message: "Please cite the canonical article, and cite this computational supplement when reproducing formal checks."
+authors:
+  - family-names: Sweet
+    given-names: Nathan
+title: "Consciousness Naturalized: Computational Supplement and Reproducibility Checks"
+type: software
+date-released: 2026-11-10
+url: "https://sweetrationalism.com/articles/consciousness/consciousness-naturalized-a-falsifiable-substrate-agnostic-consciousness-theory-ai-biology/"
+abstract: "Bounded arithmetic, dimensional, finite-model, and propositional checks accompanying an exploratory theory-comparison article; no claim of empirical validation."
