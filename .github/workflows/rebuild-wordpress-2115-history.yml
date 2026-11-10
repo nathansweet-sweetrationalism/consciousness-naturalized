@@ -3,6 +3,7 @@ on:
   push:
     paths:
       - '.github/workflows/rebuild-wordpress-2115-history.yml'
+      - 'article.html'
   workflow_dispatch:
 permissions:
   contents: write
@@ -18,7 +19,7 @@ jobs:
         shell: bash
         run: |
           python - <<'PY'
-          import zipfile, hashlib, json, datetime, urllib.request, pathlib
+          import zipfile, hashlib, json, datetime, urllib.request, pathlib, difflib, subprocess
           repo=pathlib.Path(".")
           origin=repo/"WordPress_Reconstruction_History_2026-11-10.zip"
           out=repo/"WordPress_Reconstruction_History_2026-11-10_CONSOLIDATED.zip"
@@ -29,7 +30,16 @@ jobs:
               originals={i.filename:z.read(i) for i in z.infolist() if not i.is_dir()}
           diff_url="https://raw.githubusercontent.com/nathansweet-sweetrationalism/sweet-rationalism-research/main/articles/consciousness-naturalized-a-falsifiable-substrate-agnostic-consciousness-theory-ai-biology/public_revision_diff.txt"
           with urllib.request.urlopen(diff_url,timeout=30) as response:
-              diff=response.read()
+              prior_diff=response.read().decode("utf-8")
+          # The archive v1.1.0 baseline is frozen in this historical Git revision.
+          archived=subprocess.check_output(["git","show","beb0e6af18c7dc5bae4d53c20f989a3cc88257c9:article.html"]).decode("utf-8")
+          now=article.decode("utf-8")
+          patch="".join(difflib.unified_diff(archived.splitlines(keepends=True),now.splitlines(keepends=True),fromfile="canonical-2115-v1.1.0-with-doi-links.html",tofile="wordpress-2115-current.html"))
+          if not patch.startswith("--- "): raise RuntimeError("Missing archived-to-current patch")
+          original_diff=prior_diff.split("\\n\\n# ADDENDUM:",1)[0].rstrip()
+          diff=(original_diff+"\\n\\n# ADDENDUM: archived v1.1.0 to current live reading edition\\n"+patch).encode("utf-8")
+          (repo/"public_revision_diff_latest.txt").write_bytes(diff)
+          print("Original members:",sorted(originals))
           if not diff.startswith(b"--- "): raise RuntimeError("Revision diff has unexpected opening")
           new={
             "WORDPRESS_CURRENT_2115_2026-11-10.html":article,
@@ -65,5 +75,5 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add WordPress_Reconstruction_History_2026-11-10_CONSOLIDATED.zip
+          git add WordPress_Reconstruction_History_2026-11-10_CONSOLIDATED.zip public_revision_diff_latest.txt
           git diff --cached --quiet || (git commit -m "Add validated consolidated WordPress 2115 history ZIP" && git push)
