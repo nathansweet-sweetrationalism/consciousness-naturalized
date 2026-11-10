@@ -44,6 +44,16 @@ jobs:
                           info["sample_keys"]=list(obj[0].keys())[:15] if obj and isinstance(obj[0],dict) else None
                       print("HISTORY_JSON_STRUCTURE",json.dumps(info))
                   except Exception as exc: print("HISTORY_JSON_ERROR",nm,str(exc))
+          for nm,raw in originals.items():
+              if "11_Revisions" in nm:
+                  obj=json.loads(raw)
+                  entries=obj.get("revisions",[])
+                  print("REVISIONS_OLD",json.dumps([{"id":q.get("id"),"lines_type":type(q.get("content_lines")).__name__,"lines_size":len(q.get("content_lines") or []),"extra_keys":list(q.keys())} for q in entries]))
+              if "12_DELTA" in nm:
+                  obj=json.loads(raw)
+                  for k,v in obj.items():
+                      if k.startswith("revision_"):
+                          print("REVISION_DELTA_SHAPE", k, type(v).__name__, list(v.keys())[:18] if isinstance(v,dict) else len(v))
           diff_url="https://raw.githubusercontent.com/nathansweet-sweetrationalism/sweet-rationalism-research/main/articles/consciousness-naturalized-a-falsifiable-substrate-agnostic-consciousness-theory-ai-biology/public_revision_diff.txt"
           with urllib.request.urlopen(diff_url,timeout=30) as response:
               prior_diff=response.read().decode("utf-8")
