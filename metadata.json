@@ -30,10 +30,10 @@
   "release_followup": "Create a new Zenodo version using authenticated publishing access and its actual assigned DOI; refresh article badges, CITATION.cff and repository metadata only after deposit is confirmed. Independently inspect ZIP interior and latest WordPress snapshots; never invent a DOI.",
   "wordpress_status": "publish",
   "wordpress_robots": "index,follow",
-  "consolidated_wordpress_history_archive": "https://sweetrationalism.com/wp-content/uploads/2026/11/Consciousness_Naturalized_2115_WordPress_Reconstruction_History_2026-11-10_CONSOLIDATED.zip",
-  "consolidated_wordpress_history_media_id": 218725757,
-  "consolidated_wordpress_history_file_size_bytes": 1458596,
-  "consolidated_history_content_validation": "WordPress media registry and canonical link confirmed; ZIP interior not independently extracted in this tool context",
+  "consolidated_wordpress_history_archive": "https://sweetrationalism.com/wp-content/uploads/2026/11/Consciousness_Naturalized_2115_Reconstruction_2026-11-10_FINAL.zip",
+  "consolidated_wordpress_history_media_id": 218725759,
+  "consolidated_wordpress_history_file_size_bytes": 1460691,
+  "consolidated_history_content_validation": "WordPress media registry and canonical article link confirmed; ZIP interior not independently extracted in this tool context",
   "public_revision_diff_url": "https://raw.githubusercontent.com/nathansweet-sweetrationalism/sweet-rationalism-research/main/articles/consciousness-naturalized-a-falsifiable-substrate-agnostic-consciousness-theory-ai-biology/public_revision_diff.txt",
   "zenodo_status": "v1.1.0 published; updated reading edition and consolidated archive await authenticated Zenodo new-version deposit"
 }
