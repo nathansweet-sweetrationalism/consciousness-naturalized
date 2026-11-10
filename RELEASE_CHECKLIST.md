@@ -1,26 +1,24 @@
-# November 10, 2026 release continuity checklist, article 2115
+# Release checklist: Consciousness Naturalized #2115 (November 10, 2026)
 
-Owner source review closed November 10, 2026. WordPress approved scholarly text updated and read back exactly. Article-specific GitHub repository created privately. No article-specific Zenodo DOI has yet been deposited; noindex/unlisting settings remain intentionally unchanged.
+This is a live, revisable status record. "PASS" denotes only the stated scope, not a scientific validation of consciousness or independent scholarly peer review.
 
-| Gate | Status | Evidence or remaining action |
+| Gate | Status | Exact evidential scope / next action |
 | --- | --- | --- |
-| Complete edited HTML body | PASS, WordPress published | `article.html` matched WordPress readback, 266405 characters on 2026-11-10 |
-| Near-top Bottom line placement | PASS (structural) | 117 words; repository bottom-line checker |
-| Four named canonical framework links | PASS (structural) | Repository strict link checker |
-| External-link new tab / own-site same tab | PASS (structural) | Local HTML link checker |
-| Exactly one consolidated References, after appendices and Revision Notes | PASS (structural) | Local heading audit |
-| Prose repetition screening | PASS (heuristic) | Local full-body checker; read-aloud human edit still recommended |
-| Formal checks in public computational ZIP | PASS (bounded) | Six groups rerun; two Z3 SAT models; ZIP original checksums matched |
-| DOI identities | PASS for previous v3 set of 74 in the registry audit; current link identities cross-reconciled | Current candidate has 65 `doi.org` links, 61 previously registry-checked and 4 newer original-publisher checked, plus one Springer-hosted Moreno–Mossio book DOI. Chalmers and Friston mismatches corrected; full passage fidelity is a separate gate |
-| All 39 retained flagged historical sources | PASS for primary-source identification / abstract scope, NOT all full-text passage scrutiny | 31 newly sampled or prior checks; 8 from v6 with primary-source reading; check ledger |
-| 95 historical quotation-shape flags | OWNER CLOSED | Author reports personal checks of remaining source issues, with no additional correction necessary; count refers to heuristic flags, not demonstrated errors |
-| Primary passages for each material inference and independent adversarial review | OWNER CLOSED source review | Author's direct source verification accepted; do not misreport this as independent external peer review |
-| Full article cross-section semantic compression audit | OWNER APPROVED edition | Heuristic pass done, all later scholarly changes require a new affected-gate check |
-| Full public-indexable site inventory/link decisions | OPEN; first inventory enumerated | WordPress returns 38 published posts and 15 published pages, including this protected item. Exclude any noindex/unlisted items before calling a page public/indexable; content-level decisions and signed-out checks still pending. No inbound link while protected. |
-| TXT revision audit and link / historic reconstruction decision | PASS, author-approved public | Public TXT committed to parent repository; full WordPress history uploaded as ZIP (12 revisions) |
-| Article-specific repository and parent repo synchronized | IN PROGRESS | New article-specific private repository created, WordPress exact article committed to parent; remaining file sync to verify |
-| Version and concept Zenodo DOIs / exact URL and badge formatting | OPEN: REAL DEPOSIT REQUIRED | Do not insert URL or badge until Zenodo assigns actual identifiers; check unique version/concept values |
-| WordPress final intro / Revision Notes links and signed-out visual test | LINK STRUCTURE PASS; PUBLIC RENDER CHECK OPEN | Intro and Revision Notes updated; recheck after DOI insertion; preserve excerpt and canonical |
-| WordPress status, noindex, Unlist option and sitemap | PROTECTED | Do not remove before owner signoff; these are independent gates |
+| Previous WordPress current body recovered | PASS | Exact 262K-character source snapshot; verify no concurrent later editing before overwrite. |
+| All novel methods applied to article | STAGED | New method contract and updates to Sections II, IX, XI, XII, Appendices, Revision Notes; WordPress update and readback pending. |
+| Claim dependencies and serious rivals | PASS STRUCTURAL | `CLAIM_DEPENDENCY_MAP.json` records claims, dependencies, rivals, and losses, not frozen conclusions. |
+| Prospective protocol proposals | FIVE VALID SCHEMAS | P1–P5 passed structural proposal validation. Not a completed study-specific preregistration and no empirical claims tested. |
+| Baseline article structure | PASS STATIC | 143 headings, one References after Revision Notes, Bottom line before Abstract, 252 anchors, four framework links, Gutenberg opening/closing delimiters matched in checked block categories. |
+| Arithmetic example | PASS EXACT | Brier example: marginal 1/4, conditional 4/25, gain 9/100, no clinical interpretation. |
+| Formal software rerun | PARTIAL ENVIRONMENTAL | Four Python checks and the logic audit pass here; two Z3-requiring groups and SMT countermodels cannot run because Z3 is not installed. Earlier audit reported complete run; explicitly label as prior-run evidence, not this fresh run. |
+| User source, citation and quotation review | CLOSED BY AUTHOR | Nathan Sweet explicitly confirmed no residual source errors on 2026-11-10. Not represented as independent external peer review. |
+| Public TXT revision audit | GENERATED LOCAL | Exact unified diff from historical HTML to latest candidate, to synchronize with both GitHub copies and visible WordPress link. |
+| Full WordPress reconstruction archive | RECOVERED / OWNER APPROVED PUBLIC | Original 12-revision historical ZIP recovered from private article-specific GitHub repo. Retain as recoverable historical record; append subsequent actual WP revisions once available. Private source-verification ledger remains excluded. |
+| Article-specific GitHub repository | EXISTS, PRIVATE | Verified repo with 2 commits and previous full package. Synchronize current article/protocols before public visibility change. |
+| Parent research repo | EXISTS, PUBLIC | Existing article subfolder has article, metadata, public revision TXT. Synchronize without altering unrelated articles or audit files. |
+| Zenodo | EXISTS, DRAFT | Existing draft #24119682 contains earlier v1.0.0 ZIP, no published DOI. Replace with current synchronized release before deposit; verify version DOI and concept DOI after actual publication. |
+| WordPress publication and preview | PUBLISHED / PROTECTED | Existing clean excerpt and Yoast noindex; preserve both. Live content awaits revised methods and DOI link insertion. Independently check Unlist/sitemap only if changing discovery policy. |
+| DOI and badge HTML | PENDING ASSIGNMENT | Actual version and concept links plus Zenodo badge immediately after one `<br>`; never invent an identifier. |
+| Signed-out final link/render audit | PENDING | Test new GitHub public link, revision TXT, ZIP, MathJax, mobile overflow, canonical, excerpt and unchanged noindex. |
 
-The complete historical WordPress reconstruction database is included **by explicit owner authorization dated 2026-11-10**. The private primary-passage working ledger and private audit correspondence remain excluded. Source-review closure is an author confirmation, not a claim of universal independent primary-full-text inspection.
+The prospective tests are meant to risk support for the organizational claim, not to decorate it with the label "preregistered." A genuine prospective empirical registration still needs independently fixed sample, instruments, thresholds and rival signoff.

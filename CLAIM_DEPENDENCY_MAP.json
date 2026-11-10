@@ -61,6 +61,50 @@
       "discriminating_test": "Test convergent/discrepant measures under no-report paradigms, anesthesia, disorders of consciousness and negative controls; separately validate construct sensitivity and specificity.",
       "loss_condition": "Revise any marker's confidence if independent dissociations, confounds or failed transport across patient classes show it lacks a claimed necessary or sufficient link.",
       "status": "measurement_calibration_claim"
+    },
+    {
+      "id": "C7",
+      "type": "measurement_bridge_anti_circularity",
+      "claim": "A candidate closure variable can earn independent phenomenal-marker credit only when it is not already used to construct its own target labels.",
+      "dependencies": ["C2", "C6"],
+      "rival_models": ["circular_marker-defined_classification", "independent_report-based_calibration", "multi-channel-but-dependent_ground_truth"],
+      "discriminating_test": "Predeclare blinded label sources and shared dependencies, then compare marker scores against independent and adversarial labels on held-out interventions.",
+      "loss_condition": "If target labels contain the candidate marker or are not transport-valid, withdraw claims of independent phenomenal corroboration; any separately measured functional result survives.",
+      "provenance": ["Chalmers 1998 author-hosted NCC discussion", "2026-11-10 recursive methodological audit"],
+      "status": "proposed_methodological_requirement"
+    },
+    {
+      "id": "C8",
+      "type": "philosophical_problem_form",
+      "claim": "The hypothesis that the Hard Problem is an additional unitary explanandum loses explanatory support if all constituent questions and necessary relations reconstruct its target without a positive residual.",
+      "dependencies": ["C1"],
+      "rival_models": ["unitary_hard_problem_with_necessary_relation", "irreducible_physical_phenomenal_explanation_requirement", "decomposed_problem_family"],
+      "discriminating_test": "Adversarially enumerate occurrence, character, state, subject, access, labeling, metaproblem, relation, modality and completion, then invite a positive nonreconstructible residual or indispensable joint relation.",
+      "loss_condition": "A demonstrated extra target, necessary irreconstructible relation, or superior explanatory yield of the unitary framing defeats the proposed problem-form dissolution. No empirical consciousness claim automatically changes.",
+      "provenance": ["Chalmers 1997 author-hosted discussion", "2026-11-10 recursive methodological audit"],
+      "status": "proposed_conditional_philosophical_argument"
+    },
+    {
+      "id": "C9",
+      "type": "comparative_functional_prediction",
+      "claim": "A joint measurement of endogenous constraint maintenance, self/world/action coupling, temporal self-restoration and counterfactual control may improve held-out prediction of separately measured human phenomenal aspects or engineering capacities beyond strongest rival versions.",
+      "dependencies": ["C4", "C6", "C7"],
+      "rival_models": ["history-aware_neural_dynamics", "global-neuronal-workspace", "recurrent-processing", "higher-order", "integrated-information", "active-inference", "enactivism", "biological-realization"],
+      "discriminating_test": "Compare the predeclared five prospective protocols, exact rival implementations and boundary forecasts under genuinely held-out perturbations; score only the specified target.",
+      "loss_condition": "No robust improvement over an equal-budget, history-aware and proponent-approved rival on appropriate independent labels removes claimed special functional credit; phenotype-to-feeling bridge remains independently open.",
+      "provenance": ["Part IX 2026-11-10 revision", "PROSPECTIVE_COMPARISON_PROTOCOL_v0.1.0.json"],
+      "status": "prospective_unobserved_hypothesis"
+    },
+    {
+      "id": "C10",
+      "type": "metaproblem_empirical_hypothesis",
+      "claim": "Judgments of irreducibility may vary with semantically irrelevant framing independently of the first-person phenomenon discussed.",
+      "dependencies": ["C6", "C8"],
+      "rival_models": ["reliable_modal_intuition", "stable_philosophical_argument", "semantic_framing_bias"],
+      "discriminating_test": "Predeclare counterbalanced philosophical framings, comprehension checks, participant reasons, test-retest stability and calibration to independent arguments.",
+      "loss_condition": "Stable, independently argued judgments that survive framing controls weaken the genealogy hypothesis; a framing effect never disproves the reality of experience.",
+      "provenance": ["2026-11-10 recursive methodological audit", "Part IX 9.6.8"],
+      "status": "prospective_unobserved_hypothesis"
     }
   ],
   "publication_warning": "Formal satisfiability, citation identity, theory compatibility and an observed clinical correlate each have distinct evidential scope. No automatic promotion across these bridges."
