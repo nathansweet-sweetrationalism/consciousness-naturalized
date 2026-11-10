@@ -1,11 +1,13 @@
 cff-version: 1.2.0
-message: "For the current text, cite the canonical Sweet Rationalism webpage; article-specific Zenodo DOI is pending an approved verified deposit."
+message: "Cite this archived version by its DOI; consult the canonical Sweet Rationalism webpage for current corrections."
 type: article
 title: "Consciousness Naturalized: A Falsifiable Substrate-Agnostic Consciousness Theory"
 authors:
   - family-names: Sweet
     given-names: Nathan
 url: "https://sweetrationalism.com/articles/consciousness/consciousness-naturalized-a-falsifiable-substrate-agnostic-consciousness-theory-ai-biology/"
+doi: "10.5281/zenodo.24119682"
+version: "1.1.0"
 abstract: >-
   A revisable methodological research programme for comparing consciousness
   theories under shared operational, empirical and formal constraints;
