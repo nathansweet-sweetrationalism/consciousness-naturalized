@@ -4,20 +4,21 @@
 **Canonical reading edition:** https://sweetrationalism.com/articles/consciousness/consciousness-naturalized-a-falsifiable-substrate-agnostic-consciousness-theory-ai-biology/  
 **Article-specific source archive:** https://github.com/nathansweet-sweetrationalism/consciousness-naturalized  
 **Research hub mirror:** https://github.com/nathansweet-sweetrationalism/sweet-rationalism-research/tree/main/articles/consciousness-naturalized-a-falsifiable-substrate-agnostic-consciousness-theory-ai-biology  
-**Zenodo draft:** https://zenodo.org/uploads/24119682 (not yet a citable DOI)  
+**Zenodo v1.1.0 DOI:** https://doi.org/10.5281/zenodo.24119682  
+**Zenodo all-versions DOI:** https://doi.org/10.5281/zenodo.24119681  
 **Edition date:** November 10, 2026
 
 The article evaluates consciousness theories by their explanatory targets, scope, rival predictions, interventions, independent evidence and explicit conditions for losing support. Its organizational hypothesis is an open **research claim**, not a validated identity between closure and experience. No executable check establishes a phenomenal bridge. The WordPress edition is canonical for reading and ongoing corrections; GitHub and Zenodo preserve versioned, independently inspectable copies.
 
 ## What this archive contains
 
-- `article.html`: the entire unabridged Gutenberg/HTML body of the substantive edition, to be reconciled against the WordPress readback before publication.
+- `article.html`: the entire unabridged Gutenberg/HTML body, including current live metadata links; the immutable Zenodo v1.1.0 ZIP contains the edition at the moment it was deposited, before post-deposit DOI self-links could be added.
 - `public_revision_diff.txt`: an exact unified text diff retaining removed formulations. It is a public correction record, not a source-verification certification.
 - `WordPress_Reconstruction_History_2026-11-10.zip`: the author-approved lossless twelve-revision reconstruction recovered from WordPress. This preserves *previous* revisions; later revisions have their own provenance.
 - `CLAIM_DEPENDENCY_MAP.json`: claim types, dependencies, rival accounts, interventions and conditions under which support should fall. It stores no protected set of conclusions.
 - `PROSPECTIVE_PROTOCOL.md`, `PROSPECTIVE_COMPARISON_PROTOCOL_v0.1.0.json`, and `prereg_proposals/`: five pre-data protocol proposals with explicitly unresolved registration fields.
 - `computational_supplement/`: self-contained finite-model logic checks, arithmetic, solver examples, source, and integrity hashes. Read its bounded proof-duty disclaimer.
-- `metadata.json`, `CITATION.cff` and `RELEASE_CHECKLIST.md`: version and release provenance. DOI values stay null until Zenodo actually assigns them.
+- `metadata.json`, `CITATION.cff` and `RELEASE_CHECKLIST.md`: version and release provenance, including the verified Zenodo identifiers.
 
 ## Does this count as preregistration?
 
