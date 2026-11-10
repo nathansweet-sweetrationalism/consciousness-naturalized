@@ -1,0 +1,108 @@
+{
+  "id": "P4-BOUNDARIES",
+  "status": "proposal",
+  "claim": "A preregistered self-restoring control boundary predicts specific human unity-related evidence better than anatomical, broadcast or IIT-complex boundaries where their forecasts differ.",
+  "claim_type": "empirical-boundary-interpretation",
+  "boundary": "human clinical or noninvasive coupling data; not an automatic subject count",
+  "timescale": "event, episode and longitudinal boundary",
+  "rivals": [
+    {
+      "id": "RPOC",
+      "mechanism": "endogenous recovery topology defines candidate boundary"
+    },
+    {
+      "id": "ANAT",
+      "mechanism": "anatomical segmentation"
+    },
+    {
+      "id": "GNW",
+      "mechanism": "broadcast connectivity boundary"
+    },
+    {
+      "id": "IIT",
+      "mechanism": "formal maximum complex"
+    },
+    {
+      "id": "AGN",
+      "mechanism": "subject count remains underdetermined"
+    }
+  ],
+  "variables": [
+    {
+      "name": "B",
+      "definition": "candidate self-restoring control boundary",
+      "units": "typed graph partition",
+      "observation_route": "prospectively calculated from intervention/telemetry"
+    },
+    {
+      "name": "Y",
+      "definition": "calibrated unity/disunity phenomenological indicators",
+      "units": "separate participant outcomes",
+      "observation_route": "protected records and calibrated reports"
+    },
+    {
+      "name": "X",
+      "definition": "rival anatomical/broadcast/IIT boundaries",
+      "units": "declared graph partitions",
+      "observation_route": "predeclared model computations"
+    }
+  ],
+  "differential_predictions": [
+    {
+      "rival": "RPOC",
+      "outcome": "best match to aspect-specific unity outcomes",
+      "contrast": "endogenous topology"
+    },
+    {
+      "rival": "IIT",
+      "outcome": "predictions follow complex boundaries, potentially diverging from RPOC",
+      "contrast": "causal integration"
+    },
+    {
+      "rival": "AGN",
+      "outcome": "no unique subject-count inference even from correlation",
+      "contrast": "interpretive caution"
+    },
+    {
+      "rival": "ANAT",
+      "outcome": "specified anatomical connections predict the unity indicator; any RPOC gain must survive anatomical controls",
+      "contrast": "anatomical boundary not automatically phenomenal subject"
+    },
+    {
+      "rival": "GNW",
+      "outcome": "broadcast-connected units predict unity when broadcast is the intended explanatory variable",
+      "contrast": "contrast only when broadcast and closure partitions differ"
+    }
+  ],
+  "controls": [
+    "Negative controls for network density, anatomy, signal threshold and reporting ability"
+  ],
+  "held_out_plan": "Only select cases in which predeclared boundaries genuinely disagree; hold out facilities or subjects.",
+  "loss_conditions": [
+    "Unreliable C boundary estimation",
+    "IIT/anatomical rival consistently predicts better",
+    "no independent unity label or irreducible ambiguity"
+  ],
+  "update_rule": "Demote predictive boundary claim on matched loss; leave consciousness subject enumeration open if no bridge.",
+  "provenance": [
+    "Consciousness Naturalized #2115, methods and Part IX",
+    "Section Audit P4",
+    "Private 2026-11-10 methodological audit; prospective reasoning, not observed outcomes"
+  ],
+  "authorization": {
+    "source": "Nathan Sweet, 2026-11-10 request",
+    "scope": "Publish proposal; participant intervention requires separate authorization and review"
+  },
+  "data_status": "No outcome dataset selected or analyzed for this protocol",
+  "unresolved_preregistration_fields": [
+    "sample size and power/precision",
+    "facility or cohort",
+    "exact exposure/manipulation",
+    "outcome instrument reliability",
+    "minimal meaningful effect",
+    "statistical significance/interval",
+    "missingness and exclusion",
+    "independent rival forecast signoff"
+  ],
+  "ethical_notes": "Privacy, clinical protections and consent override model-driven subject-number speculation"
+}

@@ -1,0 +1,115 @@
+{
+  "id": "P3-CLOSED-LOOP",
+  "status": "proposal",
+  "claim": "Externally corrected replay and truly endogenous self-restoration differ under unanticipated perturbation; a separate human contingent-feedback tier may affect experienced agency/ownership.",
+  "claim_type": "two-tier-engineering-and-human-phenomenology",
+  "boundary": "A: engineered controllers; B: human+VR or approved prosthetic apparatus",
+  "timescale": "A: episode horizon; B: session and adaptation",
+  "rivals": [
+    {
+      "id": "RPOC",
+      "mechanism": "causally endogenous maintenance and recovery"
+    },
+    {
+      "id": "CTRL",
+      "mechanism": "equal-budget robust controller with external scaffolding"
+    },
+    {
+      "id": "IIT",
+      "mechanism": "specified intrinsic causal complex and boundary"
+    },
+    {
+      "id": "ENACT",
+      "mechanism": "participant sensorimotor contingency"
+    },
+    {
+      "id": "GNW",
+      "mechanism": "broadcast/access in human tier"
+    }
+  ],
+  "variables": [
+    {
+      "name": "C",
+      "definition": "intervention-sensitive internally regenerated closure loops",
+      "units": "causal graph/repair time",
+      "observation_route": "ablation/rescue of internal maintenance"
+    },
+    {
+      "name": "F",
+      "definition": "recovery and viability under novel perturbation",
+      "units": "task score/time/resources",
+      "observation_route": "sealed engineering evaluation"
+    },
+    {
+      "name": "Y",
+      "definition": "human reported presence/ownership/agency",
+      "units": "separate calibrated ratings",
+      "observation_route": "blinded human elicitation; no robot phenomenal label"
+    },
+    {
+      "name": "X",
+      "definition": "IIT complex and broadcast/predictive covariates",
+      "units": "declared formal/physiological measures",
+      "observation_route": "proponent-specified computation"
+    }
+  ],
+  "differential_predictions": [
+    {
+      "rival": "RPOC",
+      "outcome": "additional effect of causally active internal repair beyond output equivalence in A; separate Y forecast in B",
+      "contrast": "counterfactual topology"
+    },
+    {
+      "rival": "CTRL",
+      "outcome": "equal performance if external support suffices in the specified task",
+      "contrast": "comparator"
+    },
+    {
+      "rival": "IIT",
+      "outcome": "may agree that causal topology matters; only predeclared boundary disagreement is discriminating",
+      "contrast": "intrinsic causal power"
+    },
+    {
+      "rival": "ENACT",
+      "outcome": "may predict live feedback phenomenology too",
+      "contrast": "human sensorimotor contingency"
+    },
+    {
+      "rival": "GNW",
+      "outcome": "human conscious access predictions track the specified broadcast and can tie RPOC when broadcast changes with feedback",
+      "contrast": "require independently matched broadcast to claim a dissociation"
+    }
+  ],
+  "controls": [
+    "Yoked replay; sham intervention; swapped support; matched resource/latency/output repertoire; positive recovery challenge"
+  ],
+  "held_out_plan": "Hold out perturbation families and apparatus settings; assess A and B with separate preregistered outcomes.",
+  "loss_conditions": [
+    "No causal gain over matched CTRL",
+    "predeclared IIT/ENACT boundary predicts better",
+    "human effects vanish after calibration",
+    "attempt to infer machine feeling from A alone"
+  ],
+  "update_rule": "Retain engineering finding if genuine, regardless of phenomenal bridge; no machine moral status determination.",
+  "provenance": [
+    "Consciousness Naturalized #2115, methods and Part IX",
+    "Section Audit P3",
+    "Private 2026-11-10 methodological audit; prospective reasoning, not observed outcomes"
+  ],
+  "authorization": {
+    "source": "Nathan Sweet, 2026-11-10 request",
+    "scope": "Publish proposal; participant intervention requires separate authorization and review"
+  },
+  "data_status": "No outcome dataset selected or analyzed for this protocol",
+  "unresolved_preregistration_fields": [
+    "sample size and power/precision",
+    "facility or cohort",
+    "exact exposure/manipulation",
+    "outcome instrument reliability",
+    "minimal meaningful effect",
+    "statistical significance/interval",
+    "missingness and exclusion",
+    "independent rival forecast signoff"
+  ],
+  "ethical_notes": "Respect consent and device safety; no unauthorized human intervention"
+}

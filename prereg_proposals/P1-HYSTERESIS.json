@@ -1,0 +1,99 @@
+{
+  "id": "P1-HYSTERESIS",
+  "status": "proposal",
+  "claim": "Endogenous self-restoration history adds held-out prediction of prespecified human conscious-state evidence after matched present state and history-aware rivals.",
+  "claim_type": "empirical-functional-and-phenomenal-bridge",
+  "boundary": "human participant in approved observational state-transition dataset, NOT all anesthetized persons",
+  "timescale": "within-session transition and cross-session recovery",
+  "rivals": [
+    {
+      "id": "RPOC",
+      "mechanism": "endogenous regeneration contributes beyond generic history"
+    },
+    {
+      "id": "DYN",
+      "mechanism": "matched history-aware neural/drug dynamical model"
+    },
+    {
+      "id": "AI",
+      "mechanism": "active inference with physiological regulation"
+    },
+    {
+      "id": "GNW",
+      "mechanism": "global broadcast with temporal state"
+    }
+  ],
+  "variables": [
+    {
+      "name": "C",
+      "definition": "quantified causal restoration/constraint regeneration",
+      "units": "standardized score",
+      "observation_route": "predeclared intervention-sensitive model, measured independently of Y"
+    },
+    {
+      "name": "Y",
+      "definition": "calibrated state/content evidence with unknown class",
+      "units": "categorical/probability",
+      "observation_route": "blinded instrument and participant report provenance"
+    },
+    {
+      "name": "X",
+      "definition": "drug/arousal, recurrence, broadcast, physiology, history",
+      "units": "mixed",
+      "observation_route": "clinically acquired measurements"
+    }
+  ],
+  "differential_predictions": [
+    {
+      "rival": "RPOC",
+      "outcome": "positive held-out improvement after inclusion C",
+      "contrast": "incremental dependence"
+    },
+    {
+      "rival": "DYN",
+      "outcome": "no additional C increment after full matched dynamical history",
+      "contrast": "generic hysteresis sufficient"
+    },
+    {
+      "rival": "AI",
+      "outcome": "may match RPOC if its endogenous control already represents same mechanism",
+      "contrast": "overlap expected; tie must be recorded"
+    },
+    {
+      "rival": "GNW",
+      "outcome": "may include temporal state and predict the same trajectory; discriminates only if frozen GNW variables and C diverge",
+      "contrast": "explicitly model history and broadcast rather than stipulating a memoryless workspace"
+    }
+  ],
+  "controls": [
+    "Matched drug exposure/arousal; nonconscious sensory controls; amnesia and response checks; autocorrelation guard"
+  ],
+  "held_out_plan": "Lock participants/sites/sessions/transitions and keep intervention classes held out; define temporal leakage gap.",
+  "loss_conditions": [
+    "C adds no stable gain beyond DYN/AI or loss reverses",
+    "measurement labels based on C",
+    "necessary version contradicted by calibrated phenomenality without C"
+  ],
+  "update_rule": "Demote functional increment only on a null calibrated test; constitutive claim remains unsettled until separate bridge; check sensitivity and power.",
+  "provenance": [
+    "Consciousness Naturalized #2115, methods and Part IX",
+    "Section Audit P1",
+    "Private 2026-11-10 methodological audit; prospective reasoning, not observed outcomes"
+  ],
+  "authorization": {
+    "source": "Nathan Sweet, 2026-11-10 request",
+    "scope": "Publish proposal; participant intervention requires separate authorization and review"
+  },
+  "data_status": "No outcome dataset selected or analyzed for this protocol",
+  "unresolved_preregistration_fields": [
+    "sample size and power/precision",
+    "facility or cohort",
+    "exact exposure/manipulation",
+    "outcome instrument reliability",
+    "minimal meaningful effect",
+    "statistical significance/interval",
+    "missingness and exclusion",
+    "independent rival forecast signoff"
+  ],
+  "ethical_notes": "Only ethically existing approved data; never introduce anesthesia for this protocol"
+}

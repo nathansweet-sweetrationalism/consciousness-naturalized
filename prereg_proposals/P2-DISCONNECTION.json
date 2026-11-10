@@ -1,0 +1,108 @@
+{
+  "id": "P2-DISCONNECTION",
+  "status": "proposal",
+  "claim": "Selective changes in temporally integrated self/world/action regulation predict felt ownership/continuity beyond matched local recurrence, broadcast and sensorimotor controls.",
+  "claim_type": "empirical-phenomenal-aspect",
+  "boundary": "consenting humans in permitted VR/body-ownership or observational lesion paradigms",
+  "timescale": "seconds to hours with follow-up",
+  "rivals": [
+    {
+      "id": "RPOC",
+      "mechanism": "self-restoring perspective-control integration"
+    },
+    {
+      "id": "RPT",
+      "mechanism": "local recurrent content"
+    },
+    {
+      "id": "GNW",
+      "mechanism": "broadcast/global availability"
+    },
+    {
+      "id": "HOT",
+      "mechanism": "higher-order access"
+    },
+    {
+      "id": "ENACT",
+      "mechanism": "sensorimotor predictive control"
+    }
+  ],
+  "variables": [
+    {
+      "name": "C",
+      "definition": "cross-time causal coupling of self-state/memory/value/action",
+      "units": "predeclared graph metric",
+      "observation_route": "independent telemetry/causal intervention"
+    },
+    {
+      "name": "Y",
+      "definition": "ownership, continuity, agency, particular content",
+      "units": "separate ratings/discrimination",
+      "observation_route": "blinded elicitation in distinct channels"
+    },
+    {
+      "name": "X",
+      "definition": "local recurrence, access, task performance, movement",
+      "units": "mixed",
+      "observation_route": "instrumented physiological and behavioral tasks"
+    }
+  ],
+  "differential_predictions": [
+    {
+      "rival": "RPOC",
+      "outcome": "aspect-specific differences follow C even when rival proxies stay within tolerance",
+      "contrast": "joint dependency"
+    },
+    {
+      "rival": "RPT",
+      "outcome": "preserved local content if relevant recurrent activity preserved",
+      "contrast": "local recurrency mechanism"
+    },
+    {
+      "rival": "GNW",
+      "outcome": "preserved broadcast predicts preserved globally accessible target",
+      "contrast": "access mechanism"
+    },
+    {
+      "rival": "ENACT",
+      "outcome": "may also predict contingent feedback effect; shared prediction not discriminator",
+      "contrast": "sensorimotor mechanism"
+    },
+    {
+      "rival": "HOT",
+      "outcome": "specific higher-order representation and confidence predict target awareness; divergence requires matched metarepresentational state",
+      "contrast": "do not equate metacognitive confidence with all experience"
+    }
+  ],
+  "controls": [
+    "Sham feedback, no-change and altered-report controls; counterbalanced order; motion/attention confounds"
+  ],
+  "held_out_plan": "Hold out participants and feedback mappings; preregister target aspect and matched-activity tolerances.",
+  "loss_conditions": [
+    "Target aspect persists after verified loss of C claimed necessary",
+    "matched ENACT/GNW/RPT scores as well or better",
+    "reports change but independent aspect measure does not"
+  ],
+  "update_rule": "Update only aspect-specific necessity or functional credit; do not infer count of phenomenal subjects.",
+  "provenance": [
+    "Consciousness Naturalized #2115, methods and Part IX",
+    "Section Audit P2",
+    "Private 2026-11-10 methodological audit; prospective reasoning, not observed outcomes"
+  ],
+  "authorization": {
+    "source": "Nathan Sweet, 2026-11-10 request",
+    "scope": "Publish proposal; participant intervention requires separate authorization and review"
+  },
+  "data_status": "No outcome dataset selected or analyzed for this protocol",
+  "unresolved_preregistration_fields": [
+    "sample size and power/precision",
+    "facility or cohort",
+    "exact exposure/manipulation",
+    "outcome instrument reliability",
+    "minimal meaningful effect",
+    "statistical significance/interval",
+    "missingness and exclusion",
+    "independent rival forecast signoff"
+  ],
+  "ethical_notes": "Do not diagnose diminished welfare/personhood from ownership scores"
+}

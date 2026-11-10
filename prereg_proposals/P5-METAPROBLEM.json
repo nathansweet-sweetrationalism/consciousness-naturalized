@@ -1,0 +1,105 @@
+{
+  "id": "P5-METAPROBLEM",
+  "status": "proposal",
+  "claim": "Judgments that experience is inexplicable may be sensitive to semantic framing independent of any change in the phenomenally targeted experience; the unitary Hard Problem may lack a positive residual after proper decomposition.",
+  "claim_type": "empirical-metajudgment-plus-philosophical-argument",
+  "boundary": "human survey participants for judgment; philosophical target is a propositional problem-form",
+  "timescale": "trial, repeated reflective judgment, philosophical comparison",
+  "rivals": [
+    {
+      "id": "GENEAL",
+      "mechanism": "cognitive genealogy/semantic framing influences gap judgment"
+    },
+    {
+      "id": "MODAL",
+      "mechanism": "stable modal intuitions with defensible independent inference"
+    },
+    {
+      "id": "UNIT",
+      "mechanism": "unitary Hard Problem has indispensable positive surplus"
+    },
+    {
+      "id": "DECOMP",
+      "mechanism": "component/relation decomposition preserves complete target"
+    }
+  ],
+  "variables": [
+    {
+      "name": "J",
+      "definition": "gap/irreducibility judgment",
+      "units": "Likert or ordinal plus text",
+      "observation_route": "counterbalanced framing and confidence"
+    },
+    {
+      "name": "E",
+      "definition": "reported phenomenal content",
+      "units": "independent narrative",
+      "observation_route": "participant evidence separate from J"
+    },
+    {
+      "name": "R",
+      "definition": "positive nonreconstructible residual",
+      "units": "argument record, nonquantitative",
+      "observation_route": "adversarial expert comparison with stable target"
+    },
+    {
+      "name": "X",
+      "definition": "prior philosophy, language, comprehension and culture",
+      "units": "stratified attributes",
+      "observation_route": "voluntary questionnaire"
+    }
+  ],
+  "differential_predictions": [
+    {
+      "rival": "GENEAL",
+      "outcome": "relevant judgement change with irrelevant framing after comprehension controls",
+      "contrast": "reliability challenge"
+    },
+    {
+      "rival": "MODAL",
+      "outcome": "stable reasons that predict cross-framing calibration",
+      "contrast": "modal reasoning"
+    },
+    {
+      "rival": "UNIT",
+      "outcome": "nonreconstructible joint relation survives adversarial decomposition",
+      "contrast": "positive residual"
+    },
+    {
+      "rival": "DECOMP",
+      "outcome": "no explanatory content lost after all relations restored",
+      "contrast": "conditional problem-form dissolution"
+    }
+  ],
+  "controls": [
+    "Counterbalanced texts; comprehension checks; independent raters; neutral phrasing; preregister culturally appropriate translations"
+  ],
+  "held_out_plan": "Hold out participants and wording sets; separate philosophical expert critique from empirical sample.",
+  "loss_conditions": [
+    "Stable independently grounded modal judgments challenge genealogy",
+    "demonstrated positive residual defeats decomposition",
+    "framing study cannot identify phenomenal state"
+  ],
+  "update_rule": "Changes to J do not alter E by assumption; update genealogy and unitary problem-form separately; no derivation of physicalism.",
+  "provenance": [
+    "Consciousness Naturalized #2115, methods and Part IX",
+    "Section Audit P5",
+    "Private 2026-11-10 methodological audit; prospective reasoning, not observed outcomes"
+  ],
+  "authorization": {
+    "source": "Nathan Sweet, 2026-11-10 request",
+    "scope": "Publish proposal; participant intervention requires separate authorization and review"
+  },
+  "data_status": "No outcome dataset selected or analyzed for this protocol",
+  "unresolved_preregistration_fields": [
+    "sample size and power/precision",
+    "facility or cohort",
+    "exact exposure/manipulation",
+    "outcome instrument reliability",
+    "minimal meaningful effect",
+    "statistical significance/interval",
+    "missingness and exclusion",
+    "independent rival forecast signoff"
+  ],
+  "ethical_notes": "Do not dismiss participants' experiential evidence because of philosophical background"
+}
