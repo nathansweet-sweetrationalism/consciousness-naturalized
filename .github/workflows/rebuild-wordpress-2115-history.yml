@@ -1,0 +1,69 @@
+name: Rebuild WordPress 2115 revision archive
+on:
+  push:
+    paths:
+      - '.github/workflows/rebuild-wordpress-2115-history.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Reconstruct and validate ZIP
+        shell: bash
+        run: |
+          python - <<'PY'
+          import zipfile, hashlib, json, datetime, urllib.request, pathlib
+          repo=pathlib.Path(".")
+          origin=repo/"WordPress_Reconstruction_History_2026-11-10.zip"
+          out=repo/"WordPress_Reconstruction_History_2026-11-10_CONSOLIDATED.zip"
+          article=(repo/"article.html").read_bytes()
+          if not origin.exists(): raise RuntimeError("Original reconstruction archive missing")
+          with zipfile.ZipFile(origin) as z:
+              if z.testzip(): raise RuntimeError("Original ZIP CRC check failed")
+              originals={i.filename:z.read(i) for i in z.infolist() if not i.is_dir()}
+          diff_url="https://raw.githubusercontent.com/nathansweet-sweetrationalism/sweet-rationalism-research/main/articles/consciousness-naturalized-a-falsifiable-substrate-agnostic-consciousness-theory-ai-biology/public_revision_diff.txt"
+          with urllib.request.urlopen(diff_url,timeout=30) as response:
+              diff=response.read()
+          if not diff.startswith(b"--- "): raise RuntimeError("Revision diff has unexpected opening")
+          new={
+            "WORDPRESS_CURRENT_2115_2026-11-10.html":article,
+            "PUBLIC_REVISION_DIFF_CURRENT.txt":diff
+          }
+          # Preserve original archive members without rewriting their contents.
+          for name in new:
+              if name in originals: raise RuntimeError("Duplicate member: "+name)
+          included={**originals,**new}
+          manifest={
+            "article_id":2115,
+            "description":"Combined earlier WordPress reconstruction snapshots and latest canonical WordPress/GitHub snapshot",
+            "source_archive":origin.name,
+            "source_archive_sha256":hashlib.sha256(origin.read_bytes()).hexdigest(),
+            "method":"preserve all original ZIP members; append current HTML and complete revision diff",
+            "warning":"The prior archive may not contain every intervening WordPress autosave; this archive does not falsely assert that every revision ID is present.",
+            "generated_utc":datetime.datetime.now(datetime.timezone.utc).isoformat(),
+            "items":{name:{"bytes":len(data),"sha256":hashlib.sha256(data).hexdigest()} for name,data in included.items()}
+          }
+          included["MANIFEST_CONSOLIDATED.json"]=json.dumps(manifest,indent=2,ensure_ascii=False).encode("utf-8")
+          with zipfile.ZipFile(out,"w",compression=zipfile.ZIP_DEFLATED,compresslevel=7) as z:
+              for name,data in sorted(included.items()):
+                  z.writestr(name,data)
+          with zipfile.ZipFile(out) as z:
+              assert z.testzip() is None
+              assert z.read("WORDPRESS_CURRENT_2115_2026-11-10.html")==article
+              assert z.read("PUBLIC_REVISION_DIFF_CURRENT.txt")==diff
+              for name,data in originals.items():assert z.read(name)==data
+          print(json.dumps({"output":out.name,"members":len(included),"historical_members":len(originals),"sha256":hashlib.sha256(out.read_bytes()).hexdigest()},indent=2))
+          PY
+      - name: Publish consolidated ZIP to repository
+        shell: bash
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add WordPress_Reconstruction_History_2026-11-10_CONSOLIDATED.zip
+          git diff --cached --quiet || (git commit -m "Add validated consolidated WordPress 2115 history ZIP" && git push)
