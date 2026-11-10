@@ -8,7 +8,7 @@
 **Zenodo all-versions DOI:** https://doi.org/10.5281/zenodo.24119681  
 **Website reading-edition revision date:** November 10, 2026  
 **Consolidated WordPress history ZIP:** https://sweetrationalism.com/wp-content/uploads/2026/11/Consciousness_Naturalized_2115_Reconstruction_2026-11-10_FINAL.zip
-**Zenodo status:** v1.1.0 DOI is immutable; a subsequent version for the updated reading edition remains to be deposited.
+**Zenodo status:** v1.1.0 remains the published deposit. Zenodo's documented 30-day minor file-correction window may permit updated files under the same DOI; substantive changes should receive a new version. No corrected Zenodo files have been deposited yet. See https://help.zenodo.org/docs/deposit/manage-files/#modify-files-after-publication.
 
 The article evaluates consciousness theories by their explanatory targets, scope, rival predictions, interventions, independent evidence and explicit conditions for losing support. Its organizational hypothesis is an open **research claim**, not a validated identity between closure and experience. No executable check establishes a phenomenal bridge. The WordPress edition is canonical for reading and ongoing corrections; GitHub and Zenodo preserve versioned, independently inspectable copies.
 
