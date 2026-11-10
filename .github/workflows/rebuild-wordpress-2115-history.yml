@@ -29,6 +29,21 @@ jobs:
           with zipfile.ZipFile(origin) as z:
               if z.testzip(): raise RuntimeError("Original ZIP CRC check failed")
               originals={i.filename:z.read(i) for i in z.infolist() if not i.is_dir()}
+          for nm,raw in originals.items():
+              if nm.endswith(".json"):
+                  try:
+                      obj=json.loads(raw)
+                      info={"archive_member":nm,"json_type":type(obj).__name__}
+                      if isinstance(obj,dict):
+                          info["top_keys"]=list(obj.keys())[:20]
+                          for k,v in obj.items():
+                              if isinstance(v,list):
+                                  info[k]={"length":len(v),"sample_keys":list(v[0].keys())[:12] if v and isinstance(v[0],dict) else None}
+                      elif isinstance(obj,list):
+                          info["length"]=len(obj)
+                          info["sample_keys"]=list(obj[0].keys())[:15] if obj and isinstance(obj[0],dict) else None
+                      print("HISTORY_JSON_STRUCTURE",json.dumps(info))
+                  except Exception as exc: print("HISTORY_JSON_ERROR",nm,str(exc))
           diff_url="https://raw.githubusercontent.com/nathansweet-sweetrationalism/sweet-rationalism-research/main/articles/consciousness-naturalized-a-falsifiable-substrate-agnostic-consciousness-theory-ai-biology/public_revision_diff.txt"
           with urllib.request.urlopen(diff_url,timeout=30) as response:
               prior_diff=response.read().decode("utf-8")
