@@ -7,16 +7,16 @@
 **Zenodo v1.1.0 DOI:** https://doi.org/10.5281/zenodo.24119682  
 **Zenodo all-versions DOI:** https://doi.org/10.5281/zenodo.24119681  
 **Website reading-edition revision date:** November 10, 2026  
-**Consolidated WordPress history ZIP:** https://sweetrationalism.com/wp-content/uploads/2026/11/Consciousness_Naturalized_2115_Reconstruction_2026-11-10_FINAL.zip
+**Consolidated WordPress history ZIP:** https://sweetrationalism.com/wp-content/uploads/2026/11/Consciousness_Naturalized_2115_WordPress_Reconstruction_History_2026-11-10_FINAL_CONSOLIDATED.zip
 **Zenodo status:** v1.1.0 remains the published deposit. Zenodo's documented 30-day minor file-correction window may permit updated files under the same DOI; substantive changes should receive a new version. No corrected Zenodo files have been deposited yet. See https://help.zenodo.org/docs/deposit/manage-files/#modify-files-after-publication.
 
-The article evaluates consciousness theories by their explanatory targets, scope, rival predictions, interventions, independent evidence and explicit conditions for losing support. Its organizational hypothesis is an open **research claim**, not a validated identity between closure and experience. No executable check establishes a phenomenal bridge. The WordPress edition is canonical for reading and ongoing corrections; GitHub and Zenodo preserve versioned, independently inspectable copies.
+The article evaluates consciousness theories by their explanatory targets, scope, rival predictions, interventions, independent evidence and explicit conditions for losing support. Its organizational hypothesis is an open **research claim**, not a validated identity between closure and experience.  The WordPress edition is canonical for reading and ongoing corrections; GitHub and Zenodo preserve versioned, independently inspectable copies.
 
 ## What this archive contains
 
 - `article.html`: the entire unabridged Gutenberg/HTML body, including current live metadata links; the immutable Zenodo v1.1.0 ZIP contains the edition at the moment it was deposited, before post-deposit DOI self-links could be added.
 - `public_revision_diff.txt`: an exact unified text diff retaining removed formulations. It is a public correction record, not a source-verification certification.
-- [Consolidated WordPress revision archive](https://sweetrationalism.com/wp-content/uploads/2026/11/Consciousness_Naturalized_2115_Reconstruction_2026-11-10_FINAL.zip): WordPress-hosted combined recovery ZIP (media attachment 218725759, 1,460,691 bytes); its described contents are earlier history, current snapshot, diff and manifest. Media registration and canonical article link are verified; ZIP member-level inspection is still outstanding.
+- [Consolidated WordPress revision archive](https://sweetrationalism.com/wp-content/uploads/2026/11/Consciousness_Naturalized_2115_WordPress_Reconstruction_History_2026-11-10_FINAL_CONSOLIDATED.zip): WordPress-hosted combined recovery ZIP (media attachment 218725759, 1,460,691 bytes); its described contents are earlier history, current snapshot, diff and manifest. Media registration and canonical article link are verified; ZIP member-level inspection is still outstanding.
 - `WordPress_Reconstruction_History_2026-11-10.zip`: the earlier twelve-revision reconstruction retained here as a separate historical predecessor; do not confuse it with the consolidated ZIP.
 - `CLAIM_DEPENDENCY_MAP.json`: claim types, dependencies, rival accounts, interventions and conditions under which support should fall. It stores no protected set of conclusions.
 - `PROSPECTIVE_PROTOCOL.md`, `PROSPECTIVE_COMPARISON_PROTOCOL_v0.1.0.json`, and `prereg_proposals/`: five pre-data protocol proposals with explicitly unresolved registration fields.
