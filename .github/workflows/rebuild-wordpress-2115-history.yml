@@ -1,4 +1,5 @@
 name: Rebuild WordPress 2115 revision archive
+# Release-target synchronization: final archive URL is now fixed in article.html
 on:
   push:
     paths:
